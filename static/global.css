@@ -1,20 +1,63 @@
-body {
-    text-align: center;
-    font-size: 12pt;
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v49/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-h1 {
-    text-shadow: 3pt 3pt 6pt lightblue;
+body {
+    text-align: center;
+    font-family: 'Roboto';
 }
 
 .content-container {
-    border-radius: 4pt;
     background-color: #e6e6e6;
-    padding: 2pt;
-    padding-bottom: 16pt;
+}
 
-    margin-left: 50pt;
-    margin-right: 50pt;
+@media (orientation: landscape) {
+    body {
+        font-size: 12pt;
+    }
 
-    box-shadow: 5pt 5pt 10pt lightblue;
+    h1 {
+        text-shadow: 3pt 3pt 6pt lightblue;
+    }
+
+    .content-container {
+        border-radius: 4pt;
+        background-color: #e6e6e6;
+        padding: 2pt;
+        padding-bottom: 16pt;
+
+        margin-left: 50pt;
+        margin-right: 50pt;
+
+        box-shadow: 5pt 5pt 10pt lightblue;
+    }
+}
+
+/* Every value here is doubled relative to landscape */
+@media (orientation: portrait) {
+    body {
+        font-size: 24pt;
+    }
+
+    h1 {
+        text-shadow: 6pt 6pt 12pt lightblue;
+    }
+
+    .content-container {
+        border-radius: 8pt;
+        background-color: #e6e6e6;
+        padding: 4pt;
+        padding-bottom: 32pt;
+
+        margin-left: 100pt;
+        margin-right: 100pt;
+
+        box-shadow: 10pt 10pt 20pt lightblue;
+    }
 }
