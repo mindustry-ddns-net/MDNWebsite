@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+    font-size: 12pt;
+}
+
+h1 {
+    text-shadow: 3pt 3pt 6pt lightblue;
+}
+
+.content-container {
+    border-radius: 4pt;
+    background-color: #e6e6e6;
+    padding: 2pt;
+    padding-bottom: 16pt;
+
+    margin-left: 50pt;
+    margin-right: 50pt;
+
+    box-shadow: 5pt 5pt 10pt lightblue;
+}
