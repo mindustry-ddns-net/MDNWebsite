@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>MDN</title>
+    <link rel="stylesheet" href="/static/global.css">
+    <script async src="/static/html-import.js"></script>
+</head>
+
+<header>
+    <link href="/header" rel="html-import">
+</header>
+
+<body>
+<h1>Anti-VPN</h1>
+<div class="content-container">
+    <h2>Why?</h2>
+    Due to the nature of how Mindustry handles UUIDs, we may sometimes opt to IP-ban a player if they are continuously
+    causing issues for other players. However, IP bans aren't perfect, and can be circumvented in a variety of ways.
+    One way is via a VPN. We've opted to develop and implement an anti-VPN plugin to ensure that players aren't trying
+    to circumvent a ban. The plugin also prevents other methods of obfuscation, such as proxies and hosting services.
+
+    <h2>How does it work?</h2>
+    We're currently using a service called <a href="https://iplocate.io/">IPLocate</a>, which freely provides privacy
+    related information (such as whether it's a VPN, proxy, hosting service, etc.) up to 1000 requests per day.
+    Additionally, it provides other information, such as geolocation, ISP details, etc. However, we're currently only
+    using it for determining whether an IP address is being used to obfuscate another IP address.
+
+    <br><br>
+    Additionally, the plugin is open-source with the GPL 3.0 license, meaning that you could use it too. The code is
+    available on <a href="https://github.com/mindustry-ddns-net/antiVPN">GitHub</a> and a
+    <a href="https://github.com/mindustry-ddns-net/antiVPN/releases/latest">pre-compiled JAR</a> is available for
+    download.
+</div>
+</body>
+
+</html>

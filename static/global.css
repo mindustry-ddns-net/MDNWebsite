@@ -14,50 +14,111 @@ body {
 }
 
 .content-container {
+    transition-duration: 0.25s;
+
     background-color: #e6e6e6;
+
+    border-radius: 0.5em;
+    /*background-color: #e6e6e6;*/
+    background-color: RGBA(0, 0, 0, 0.05);
+    padding: 1em;
+
+    margin: 10em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+
+    box-shadow: 0.5em 0.5em 1em lightblue;
+}
+
+/*
+.content-container:hover {
+    transition-duration: 0.25s;
+
+    font-size: 1.1em;
+    box-shadow: 0.5em 0.5em 1em lightblue;
+}
+*/
+
+nav {
+    align-items: right;
+    padding: 0.125em;
+    margin-top: -0.5em;
+
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+
+    background-color: RGBA(0, 0, 0, 0.075);
+    box-shadow: 0.5em 0.5em 0.5em lightblue;
+}
+
+.nav-list {
+    list-style-type: none;
+
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0.5em;
+}
+
+.nav-object {
+    transition-duration: 0.25s;
+
+    background-color: #d0d0d0;
+    color: RGBA(0, 0, 0, 0.90);
+    text-decoration: none;
+    box-shadow: 0.5em 0.5em 0.5em lightblue;
+
+    margin: 0.25em;
+    padding: 0.4em;
+    border-radius: 0.25em;
+}
+
+.nav-object:hover {
+    font-size: 1.25em;
+    transition-duration: 0.25s;
+    box-shadow: 1em 1em 0.5em lightblue;
+}
+
+#logo {
+    transition-duration: 0.05s;
+
+    float: left;
+    margin-left: 1em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+
+    height: 3em;
+    width: 2.6em;
+}
+
+#logo:active {
+    transition-duration: 0.05s;
+
+    margin-top: 1.7em;
+    height: 1.5em;
+    width: 5.2em;
+    margin-left: 0em;
+}
+
+#mdn-name {
+    text-align: left;
+    margin-top: 1em;
 }
 
 @media (orientation: landscape) {
     body {
-        font-size: 12pt;
-    }
-
-    h1 {
-        text-shadow: 3pt 3pt 6pt lightblue;
-    }
-
-    .content-container {
-        border-radius: 4pt;
-        background-color: #e6e6e6;
-        padding: 2pt;
-        padding-bottom: 16pt;
-
-        margin-left: 50pt;
-        margin-right: 50pt;
-
-        box-shadow: 5pt 5pt 10pt lightblue;
+        font-size: 14pt;
     }
 }
 
 /* Every value here is doubled relative to landscape */
 @media (orientation: portrait) {
     body {
-        font-size: 24pt;
-    }
-
-    h1 {
-        text-shadow: 6pt 6pt 12pt lightblue;
+        font-size: 28pt;
     }
 
     .content-container {
-        border-radius: 8pt;
-        background-color: #e6e6e6;
-        padding: 4pt;
-        padding-bottom: 32pt;
-
-        margin-left: 100pt;
-        margin-right: 100pt;
-
-        box-shadow: 10pt 10pt 20pt lightblue;
+        margin: 1em;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
     }
 }
