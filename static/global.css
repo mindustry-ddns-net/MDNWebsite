@@ -18,7 +18,7 @@ body {
     font-family: 'Roboto';
 }
 
-.content-container {
+.content-container, .server-container {
     transition-duration: 0.25s;
 
     background-color: #e6e6e6;
