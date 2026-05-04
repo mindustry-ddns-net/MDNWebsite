@@ -11,28 +11,53 @@
 
 :root {
     --shadow-color: #0000001f;
+    --navbar-height: 2.5em;
+    --logo-height: 2.5em;
+}
+
+header {
+    padding: 0;
+    margin: 0;
 }
 
 body {
     text-align: center;
-    font-family: 'Roboto';
+    font-family: 'Roboto', serif;
+    /*background: url("/static/logo.png");*/
+}
+
+h1 {
+    border-bottom: black 1pt solid;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .content-container, .server-container {
     transition-duration: 0.25s;
 
-    background-color: #e6e6e6;
-
     border-radius: 0.5em;
     /*background-color: #e6e6e6;*/
-    background-color: RGBA(0, 0, 0, 0.05);
+
     padding: 1em;
 
-    margin: 10em;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+    margin: 1.5em 10em;
+    /*backdrop-filter: blur(0.5ch);*/
+}
 
+.server-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40vw;
+
+    background-color: RGBA(0, 0, 0, 0.05);
     box-shadow: 0.75em 0.75em 0.25em var(--shadow-color);
+}
+
+.content-container {
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*
@@ -45,77 +70,58 @@ body {
 */
 
 nav {
-    align-items: right;
-    padding: 0.125em;
-    margin-top: -0.5em;
-    height: 3.5em;
+    margin: -0.3em;
+    padding: 0.1em;
+    min-height: var(--navbar-height);
 
-    border-bottom-left-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
+    /*border-bottom: black solid 2pt;*/
 
     background-color: RGBA(0, 0, 0, 0.075);
-    box-shadow: 0.75em 0.75em 0.25em var(--shadow-color);
+    /*background-color: rgba(234, 109, 16);*/
 }
 
 .nav-list {
     list-style-type: none;
 
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 0.5em;
+
+    justify-content: left;
+    /*padding: calc(var(--navbar-height) / 4);*/
 }
 
 .nav-object {
-    transition-duration: 0.25s;
-
-    background-color: #00000010;
     color: RGBA(0, 0, 0, 0.95);
     text-decoration: none;
-    box-shadow: 0.5em 0.5em 0.25em var(--shadow-color);
-
-    margin: 0.5em;
-    padding: 0.4em;
-    border-radius: 0.25em;
 }
 
 #logo {
     transition-duration: 0.05s;
 
-    float: left;
-    margin-left: 1em;
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
+    float: right;
+    /*margin: 0.25em;*/
+    margin-right: 1em;
+    margin-top: calc(var(--navbar-height) / 8);
 
-    height: 3em;
-    width: 2.6em;
+    height: var(--logo-height);
+    width: 2.1625em;
+    /*width: calc(0.865em * var(--logo-height));*/
 }
 
 #logo:active {
     transition-duration: 0.05s;
 
-    margin-top: 1.7em;
-    height: 1.5em;
-    width: 5.2em;
-    margin-left: 0em;
-}
-
-#mdn-name {
-    text-align: left;
-    margin-top: 1em;
+    margin-top: calc(var(--navbar-height) - calc(var(--logo-height) / 2));
+    height: calc(var(--logo-height) / 2);
+/*     aspect-ratio: 4/1; */
+    width: 4.325em; /* Have to precalculate this due to CSS being weird, although it's just `width * 2` */
+    margin-left: 0;
 }
 
 @media (orientation: landscape) {
     body {
         font-size: 14pt;
-    }
-
-    .nav-object:hover {
-        font-size: 1.25em;
-        margin: 0.1em;
-        margin-bottom: 0em;
-/*        transform: scale(1.25);*/
-        transition-duration: 0.25s;
-        box-shadow: 0.75em 0.75em 0.25em var(--shadow-color);
     }
 }
 
@@ -127,5 +133,9 @@ nav {
 
     .content-container {
         margin: 1em;
+    }
+
+    .server-container {
+        width: 95%;
     }
 }

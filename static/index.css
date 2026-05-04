@@ -1,6 +1,6 @@
-.server-container {
-    width: 20em;
-}
+/*.server-container {*/
+/*    width: 20em;*/
+/*}*/
 
 h3 {
     margin-bottom: 0em;
@@ -8,14 +8,14 @@ h3 {
 }
 
 @media (orientation: landscape) {
-    .server-container[right] {
-        margin-left: auto;
-        margin-right: 10em;
-    }
+    /*.server-container[right] {*/
+    /*    margin-left: auto;*/
+    /*    margin-right: 10em;*/
+    /*}*/
 }
 
 @media (orientation: portrait) {
-    .server-container {
-        margin-left: 0em;
-    }
+    /*.server-container {*/
+    /*    margin-left: 0em;*/
+    /*}*/
 }
